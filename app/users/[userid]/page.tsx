@@ -1,14 +1,14 @@
 "use client"
-interface useridpro{
-    params:{
-        userid:string
-    }
-}
+// interface useridpro{
+//     params:{
+//         userid:string
+//     }
+// }
 
 
 const page=({
     params
-}:useridpro)=>{
+}:any)=>{
 console.log(params.userid,'test');
 
 

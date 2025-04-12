@@ -33,7 +33,7 @@ export const create = mutation({
       title: args.title,
       orgId: args.orgId,
       authorId: identity.subject,
-      authorName: identity.name,
+      authorName: identity.name ?? "Unknown",
       imageUrl: randomImage,
     });
 

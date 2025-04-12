@@ -5,16 +5,16 @@ import EmptyOrg from "./_components/empty-org"
 import BoardList from "./_components/board-List";
 
 
-interface DashboardPageProps{
-    searchParams:{
-        search?:string,
-        favorites?:string,
-        
-    }
-}
+// interface DashboardPageProps {
+//     searchParams: {
+//         search?: string,
+//         favorites?: string,
 
-const DashboardPage = ({ searchParams }:DashboardPageProps) => {
-    
+//     }
+// }
+
+const DashboardPage = ({ searchParams }: any) => {
+
     const { organization } = useOrganization(); // Get active organization
 
 
@@ -23,7 +23,7 @@ const DashboardPage = ({ searchParams }:DashboardPageProps) => {
             {
                 !organization
                     ? <EmptyOrg />
-                    : <BoardList orgId={organization.id} query={searchParams} /> 
+                    : <BoardList orgId={organization.id} query={searchParams} />
             }
         </div>
     )

@@ -19,7 +19,7 @@ export const Participants = () => {
                     return (
                         <UserAvatar
                             borderColor={connectionIdToColor(connectionId)}
-                            src={info?.picture}
+                            src={info?.picture as string | undefined}
                             key={connectionId}
                             name={info?.name}
                             fallback={info?.name?.[0] || 'T'}
@@ -30,7 +30,7 @@ export const Participants = () => {
                     currentUser && (
                         <UserAvatar
                             borderColor={connectionIdToColor(currentUser.connectionId)}
-                            src={currentUser.info?.picture}
+                            src={currentUser.info?.picture as string | undefined}
                             name={`${currentUser.info?.name} (You)`}
                             fallback={currentUser.info?.name?.[0]}
 
