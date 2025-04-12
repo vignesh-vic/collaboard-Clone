@@ -9,8 +9,8 @@ interface ToolButtonprops {
     label: string,
     icon: LucideIcon,
     onClick: () => void;
-    isActive?: Boolean,
-    isDisabled?: Boolean ,
+    isActive?: boolean,
+    isDisabled?: boolean ,
 }
 
 

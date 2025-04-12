@@ -8,7 +8,6 @@ import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { BoardCard } from "./board-cart";
 import { NewBoardButton } from "./NewBoardButton";
-import { useSearchParams } from "next/navigation";
 
 interface boardListProps {
     orgId: string;

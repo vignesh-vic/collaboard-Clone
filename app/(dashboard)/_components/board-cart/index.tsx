@@ -37,7 +37,7 @@ export const BoardCard = ({
     isFavorite,
 }: BoardCartprops) => {
     const { userId } = useAuth();
-    const handleFavorite = useMutation(api.board.favorite)
+    // const handleFavorite = useMutation(api.board.favorite)
     const { pending: pendingFav, mutate: onFavorite } = useApiMutation(api.board.favorite)
     const { pending: pendingUnFav, mutate: onUnFavorite } = useApiMutation(api.board.unfavorite)
 
