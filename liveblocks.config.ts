@@ -7,6 +7,10 @@ const client = createClient({
   authEndpoint: "/api/liveblocks-auth",
 });
 
+type Presence = {
+  cursor: { x: number; y: number } | null;
+};
+
 type UserMeta = {
   id?: string;
   info?: {
@@ -20,9 +24,13 @@ export const {
   suspense: {
     RoomProvider,
     useOthers,
+    useOther,
     useMyPresence,
     useStorage,
     useMutation,
     useSelf,
+    useCanRedo,
+    useCanUndo,
+    useHistory,
   },
 } = createRoomContext(client);

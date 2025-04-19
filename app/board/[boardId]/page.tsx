@@ -2,12 +2,12 @@ import { Canvas } from "./_components/convas"
 import { Room } from "@/components/room"
 import Loading from "./_components/Loading"
 
-// interface BoardIdPageProps {
-//     params: {
-//         boardId: string,
+interface BoardIdPageProps {
+    params: {
+        boardId: string,
 
-//     }
-// }
+    }
+}
 
 
 const BoardIdPage = ({ params }: any) => {
