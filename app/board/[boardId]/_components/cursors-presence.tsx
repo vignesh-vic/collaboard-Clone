@@ -9,6 +9,7 @@ import { useOthersMapped } from "@/liveblocks.config"
 import { Path } from "./path"
 
 
+
 const Cursors = () => {
     const ids = useOthersConnectionIds()
 

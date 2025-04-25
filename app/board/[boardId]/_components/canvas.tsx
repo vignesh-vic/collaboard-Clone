@@ -1,6 +1,7 @@
 "use client"
 import { nanoid } from 'nanoid'
 import { useCallback, useEffect, useMemo, useState } from "react"
+import { CursorPresence } from "./cursors-presence"
 import { LiveObject } from '@liveblocks/client'
 import { useHistory, useCanRedo, useCanUndo, useMutation, useOthersMapped, useSelf } from "@/liveblocks.config"
 import { colorToCss, connectionIdToColor, findIntersectingLayersWithRectangle, penPointsToPathLayer, pointerEventToCanvasPoint, resizeBounds } from "@/lib/utils"
@@ -21,7 +22,6 @@ import {
     XYWH
 } from "@/types/canvas"
 import { Path } from './path'
-import { CursorPresence } from "./cursors-presence"
 import { useStorage } from "@/liveblocks.config"
 import { LayerPreview } from './layer-preview'
 import { SelectionBox } from './selection-box'
