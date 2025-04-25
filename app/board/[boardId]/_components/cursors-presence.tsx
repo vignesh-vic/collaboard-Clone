@@ -1,10 +1,10 @@
 "use client"
 
 import { shallow } from "@liveblocks/client"
+import { Cursor } from "./cursor"
 import { useOthersConnectionIds } from "@/liveblocks.config"
 import { memo } from "react"
 import { colorToCss } from "@/lib/utils"
-import { Cursor } from "./cursor"
 import { useOthersMapped } from "@/liveblocks.config"
 import { Path } from "./path"
 
