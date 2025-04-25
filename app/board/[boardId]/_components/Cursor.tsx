@@ -9,19 +9,18 @@ interface CursorProps {
     connectionId: number
 }
 
- export const Cursor = memo((
+export const Cursor = memo((
     { connectionId }: CursorProps
 ) => {
-    
+
     const info = useOther(connectionId, (user: { info: any }) => user?.info)
-    const cursor = useOther(connectionId, (user) => user?.presence.cursor)
+    const cursor:any = useOther(connectionId, (user) => user?.presence.cursor)
     const name = info?.name || 'Teammate'
-    console.log(info, cursor);
     // const info = otherUser?.info;
     // const cursor = otherUser?.presence?.cursor;
     // const name = info?.name || "Teammate";
 
-    
+
 
     if (!cursor) {
         return null
@@ -31,10 +30,10 @@ interface CursorProps {
     return (
         <foreignObject
             style={{
-                transform: `translateX(${x}px) translateX(${y}px)`
+                transform: `translateX(${x}px) translateY(${y}px)`
             }}
             height={50}
-            width={50}
+            width={name.length * 10 + 24}
             className="relative drop-shadow-md"
         >
             <MousePointer2
@@ -44,7 +43,11 @@ interface CursorProps {
                     color: connectionIdToColor(connectionId)
                 }}
             />
-
+            <div className="absolute left-5 px-1.5 py-0.5 rounded-md text-xs text-white font-semibold"
+            style={{backgroundColor:connectionIdToColor(connectionId)}}
+            >
+                {name}
+            </div>
 
         </foreignObject>
     )

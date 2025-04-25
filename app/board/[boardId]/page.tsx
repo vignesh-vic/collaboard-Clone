@@ -1,4 +1,4 @@
-import { Canvas } from "./_components/convas"
+import { Canvas } from "./_components/canvas"
 import { Room } from "@/components/room"
 import Loading from "./_components/Loading"
 

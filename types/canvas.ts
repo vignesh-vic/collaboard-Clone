@@ -17,13 +17,13 @@ export enum LayerType {
   Note,
 }
 
-export type Rectangle = {
+export type RectangleLayer = {
   type: LayerType.Rectangle;
   x: number;
   y: number;
   height: number;
   width: number;
-  fil: Color;
+  fill: Color;
   value?: string;
 };
 
@@ -33,7 +33,7 @@ export type EllipseLayer = {
   y: number;
   height: number;
   width: number;
-  fil: Color;
+  fill: Color;
   value?: string;
 };
 
@@ -43,7 +43,7 @@ export type PathLayer = {
   y: number;
   height: number;
   width: number;
-  fil: Color;
+  fill: Color;
   points: number[][];
   value?: string;
 };
@@ -54,7 +54,7 @@ export type TextLayer = {
   y: number;
   height: number;
   width: number;
-  fil: Color;
+  fill: Color;
   value?: string;
 };
 
@@ -64,7 +64,7 @@ export type NoteLayer = {
   y: number;
   height: number;
   width: number;
-  fil: Color;
+  fill: Color;
   value?: string;
 };
 
@@ -89,7 +89,7 @@ export enum Side {
 
 export type CanvasState =
   | { mode: CanvasMode.None }
-  | { mode: CanvasMode.SelectionNet; orgin: Point; current?: Point }
+  | { mode: CanvasMode.SelectionNet; origin: Point; current?: any }
   | { mode: CanvasMode.Translating; current?: Point }
   | {
       mode: CanvasMode.Inserting;
@@ -112,3 +112,5 @@ export enum CanvasMode {
   Resizing,
   Pencil,
 }
+
+export type Layer = RectangleLayer | EllipseLayer | PathLayer| TextLayer |NoteLayer
